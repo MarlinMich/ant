@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Zadanie 32</title>
+
+    <script type="text/javascript">
+        function telefon(marka, NrTelefonu, model) {
+            this.marka = marka;
+            this.NrTelefonu = NrTelefonu;
+            this.model = model;
+        }
+
+        telefon.prototype.wypisz = function () {
+            alert(this.marka + ' ' + this.NrTelefonu + ' ' + this.model);
+        };
+
+        var telefon1 = new telefon("Jabłko", "123456789", "X2137");
+        var telefon2 = new telefon('Hułałej', '987654321', 'S-76');
+        telefon1.wypisz();
+        telefon2.wypisz();
+        document.write("dostęp do właściwości" + "<br><br>");
+        document.write("telefon pierwszy " + " <br> Marka: " + telefon1.marka + " " + " <br> NrTelefonu: " + telefon1.NrTelefonu + " " + " <br> Model: " + telefon1.model + "<br>");
+        document.write(" <br>  <br> telefon drugi " + "  <br> Marka: " + telefon2.marka + " " + " <br> NrTelefonu: " + telefon2.NrTelefonu + " " + " <br> Model: " + telefon2.model);
+    </script>
+</head>
+
+</html>
+
+

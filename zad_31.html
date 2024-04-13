@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Zadanie 31</title>
+</head>
+
+<script type="text/javascript">
+    var telefon = {
+        marka: 'Jabłko',
+        NrTelefonu: 123456789,
+        model: 'X2137',
+        wyswietl_michalik: function () {
+            document.write(this.marka + ' ' + this.model)
+        }
+    }
+    telefon.wyswietl_michalik();
+    telefon.bateria = "74%";
+    telefon.wypisz = function () {
+        alert("stan baterii: " + this.bateria)
+    }
+    telefon.wypisz();
+</script>
+
+</html>

@@ -1,0 +1,101 @@
+<html>
+	<meta charset="UTF-8">
+	<head>
+	</head>
+	<body>
+<h1>
+1. Określanie właściwości obiektu: <br>
+   - Poprzez bezpośredni dostęp do pola: <br>
+     ```javascript <br>
+     let samochod = { marka: "Toyota", model: "Camry" }; <br>
+     let markaSamochodu = samochod.marka; // dostęp do pola "marka" <br>
+     ``` <br>
+   - Za pomocą metody get w klasie (w przypadku języków wspierających getter): <br>
+     ```javascript <br>
+     class Samochod { <br>
+         constructor(marka) { <br>
+             this._marka = marka; <br>
+         } <br>
+         get marka() { <br>
+             return this._marka; <br>
+         } <br>
+     } <br>
+     let mojSamochod = new Samochod("Toyota"); <br>
+     let marka = mojSamochod.marka; // dostęp do pola "marka" przez metodę get <br>
+     ``` <br>
+<br>
+2. Odwoływanie się do pól (właściwości) i metod: <br>
+   - Odwołanie do pola: <br>
+     ```javascript <br>
+     let wartośćPola = obiekt.pole; <br>
+     ``` <br>
+   - Wywołanie metody: <br>
+     ```javascript <br> 
+     obiekt.metoda(); <br>
+     ``` <br>
+<br>
+3. Cechy konstruktora: <br>
+   - Inicjalizuje nowo tworzony obiekt. <br>
+   - Często używany do ustawiania początkowego stanu obiektu. <br>
+   - Ma ten samą nazwę co klasa, do której należy. <br>
+ <br>
+4. Konstruowanie obiektu: <br>
+   ```javascript <br>
+   class Przyklad { <br>
+       constructor(pole1, pole2, pole3) { <br> 
+           this.pole1 = pole1; <br>
+           this.pole2 = pole2; <br>
+           this.pole3 = pole3; <br>
+       } <br>
+       metoda() { <br>
+           // kod metody <br>
+       } <br>
+   } <br>
+   let nowyObiekt = new Przyklad("wartosc1", "wartosc2", "wartosc3"); <br>
+   ``` <br>
+ <br>
+5. Znaczenie słowa "this":** <br>
+   - "this" odnosi się do bieżącego obiektu. <br>
+   - Oddziela pola od parametrów i zmiennych lokalnych. <br>
+   ```javascript <br>
+   class Przyklad { <br>
+       constructor(pole) { <br>
+           this.pole = pole; // "this" oznacza, że przypisujemy wartość do pola obiektu <br>
+       } <br>
+   } <br>
+   ``` <br>
+<br> 
+6. Konstruktor w JavaScript (JS):**<br>
+   ```javascript <br>
+   function Samochod(marka, model) { <br>
+       this.marka = marka; <br>
+       this.model = model; <br>
+   } <br>
+   let mojSamochod = new Samochod("Toyota", "Camry"); <br>
+   ``` <br>
+ <br>
+7. Znaczenie słowa kluczowego "new":** <br>
+   - "new" tworzy nową instancję obiektu. <br>
+   ```javascript <br>
+   let nowyObiekt = new Klasa(); <br>
+   ``` <br>
+ <br>
+<b> 8. Znaczenie słowa kluczowego "prototype": <br>
+   - "prototype" jest obiektem, który zawiera właściwości i metody, które będą współdzielone przez wszystkie instancje danej klasy. <br>
+   ```javascript <br>
+   function Klasa() {} <br>
+   Klasa.prototype.metoda = function() { <br>
+       // kod metody <br>
+   }; <br>
+   let obiekt1 = new Klasa(); <br>
+   let obiekt2 = new Klasa(); <br>
+   obiekt1.metoda(); // Wywołanie metody dla obiekt1 <br>
+   ``` <br>
+ </b>
+ <br>
+
+
+
+</h1>
+	</body>
+</html>
